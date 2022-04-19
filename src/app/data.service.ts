@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
 
   //private DATA_BASE_URL = "http://localhost:4200/assets/elden-ring-data/";
-  private DATA_BASE_URL = "https://raw.githubusercontent.com/elden-ring-playground/elden-ring-data/";
+  private DATA_BASE_URL = "https://raw.githubusercontent.com/elden-ring-playground/elden-ring-data/main/";
 
   constructor(private http: HttpClient) { }
 
