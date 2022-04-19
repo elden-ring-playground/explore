@@ -16,7 +16,7 @@ Install Node v16
 
 ## Publish new version
 
-`ng build --output-path docs --base-href /explore/`
+`ng build --output-path docs --base-href "https://elden-ring-playground.github.io/explore/"`
 
 `cp docs/index.html docs/404.html`
 
