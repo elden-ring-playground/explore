@@ -83,6 +83,32 @@ export class AppComponent {
         });
       }
     }
+    // Search Tutorial
+    for (let tutorialId in this.menuMessages["Tutorial"]) {
+      let tutorial = this.menuMessages["Tutorial"][tutorialId];
+      if (   (tutorial["title"] != null && tutorial["title"].toLowerCase().includes(text))
+          || (tutorial["body" ] != null && tutorial["body" ].toLowerCase().includes(text))) {
+        this.searchResults.push({
+          "type": "Tutorial",
+          "name": tutorial["title"],
+          "info": "Tutorial",
+          "caption": tutorial["body"]
+        });
+      }
+    }
+    // Search Loading
+    for (let loadingId in this.menuMessages["Loading"]) {
+      let loading = this.menuMessages["Loading"][loadingId];
+      if (   (loading["title"] != null && loading["title"].toLowerCase().includes(text))
+          || (loading["body" ] != null && loading["body" ].toLowerCase().includes(text))) {
+        this.searchResults.push({
+          "type": "Loading",
+          "name": loading["title"],
+          "info": "Loading Screen",
+          "caption": loading["body"]
+        });
+      }
+    }
     // Search Weapons (names and captions)
     for (let weaponId in this.itemMessages["Weapon"]) {
       let weapon = this.itemMessages["Weapon"][weaponId];
@@ -107,6 +133,34 @@ export class AppComponent {
           "name": armor["name"],
           "info": armor["info"],
           "caption": armor["caption"]
+        });
+      }
+    }
+    // Search Accessory (talismans) (name, info, caption)
+    for (let talismanId in this.itemMessages["Accessory"]) {
+      let talisman = this.itemMessages["Accessory"][talismanId];
+      if (   (talisman["name"]    != null && talisman["name"   ].toLowerCase().includes(text))
+          || (talisman["info"]    != null && talisman["info"   ].toLowerCase().includes(text))
+          || (talisman["caption"] != null && talisman["caption"].toLowerCase().includes(text))) {
+        this.searchResults.push({
+          "type": "Talisman",
+          "name": talisman["name"],
+          "info": talisman["info"],
+          "caption": talisman["caption"]
+        });
+      }
+    }
+    // Search Goods (other items) (name, info, caption)
+    for (let goodsId in this.itemMessages["Goods"]) {
+      let goods = this.itemMessages["Goods"][goodsId];
+      if (   (goods["name"]    != null && goods["name"   ].toLowerCase().includes(text))
+          || (goods["info"]    != null && goods["info"   ].toLowerCase().includes(text))
+          || (goods["caption"] != null && goods["caption"].toLowerCase().includes(text))) {
+        this.searchResults.push({
+          "type": "Item",
+          "name": goods["name"],
+          "info": goods["info"],
+          "caption": goods["caption"]
         });
       }
     }

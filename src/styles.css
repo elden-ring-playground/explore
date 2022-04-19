@@ -16,20 +16,24 @@
     background-position:0 0
 }
 
-.navsprite.a {
-    background-position:-110px 0
+.navsprite.Talisman {
+    background-position:-110px 0; /* bag icon for Talisman ("Accessory") */
+}
+
+.navsprite.Item {
+    background-position:-110px 0; /* bag icon for Item ("Goods") */
 }
 
 .navsprite.Character {
-    background-position:-221px 0; /* character icon for Characters/NPCs */
+    background-position:-221px 0; /* character icon for Characters ("Npc") */
 }
 
 .navsprite.Weapon {
-    background-position:-332px 0; /* weapon+armor icon for Weapons */
+    background-position:-332px 0; /* weapon+armor icon for "Weapon" */
 }
 
 .navsprite.Armor {
-    background-position:-332px 0; /* weapon+armor icon for Armor */
+    background-position:-332px 0; /* weapon+armor icon for Armor ("Protector") */
 }
 
 .navsprite.d {
