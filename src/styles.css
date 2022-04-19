@@ -1,0 +1,59 @@
+.match {
+    text-decoration: solid underline 3px rgba(255, 255, 255, 0.25);
+}
+
+.navsprite {
+    background-image: url('/assets/images/navsprite-large.png');
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.navsprite.home {
+    background-position:0 0
+}
+
+.navsprite.a {
+    background-position:-110px 0
+}
+
+.navsprite.Character {
+    background-position:-221px 0; /* character icon for Characters/NPCs */
+}
+
+.navsprite.Weapon {
+    background-position:-332px 0; /* weapon+armor icon for Weapons */
+}
+
+.navsprite.Armor {
+    background-position:-332px 0; /* weapon+armor icon for Armor */
+}
+
+.navsprite.d {
+    background-position:-443px 0
+}
+
+.navsprite.Place {
+    background-position:-554px 0; /* world icon for Place */
+}
+
+.navsprite.Quote {
+    background-position:-665px 0 /* head+scrolls icon for Quotes */
+}
+
+.navsprite.g {
+    background-position:-776px 0
+}
+
+.navsprite.h {
+    background-position:-887px 0
+}
+
+.navsprite.miniring {
+    width: 48px;
+    height: 48px;
+    background-position: -887px 0
+}
