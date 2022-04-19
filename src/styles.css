@@ -3,7 +3,7 @@
 }
 
 .navsprite {
-    background-image: url('/assets/images/navsprite-large.png');
+    background-image: url('assets/images/navsprite-large.png');
     background-repeat: no-repeat;
     width: 96px;
     height: 96px;
