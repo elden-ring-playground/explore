@@ -1,3 +1,13 @@
+body {
+    font-family: Raleway;
+    color: white;
+    line-height: 1.75em;
+    background: url('assets/images/elden-ring-background-page.webp') no-repeat;
+    background-attachment:fixed;
+    margin: 0;
+    padding: 0;
+}
+
 .match {
     text-decoration: solid underline 3px rgba(255, 255, 255, 0.25);
 }
@@ -60,4 +70,114 @@
     width: 48px;
     height: 48px;
     background-position: -887px 0
+}
+
+.site-title {
+    font-size:x-large;
+    background-color: #c19d53;
+    padding: 16px;
+}
+
+.search-bar {
+    font-size: x-large;
+    padding: 16px;
+}
+
+.search-input {
+    margin-left: 16px;
+    font-size: x-large;
+}
+
+.decorative-break {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 640px;
+}
+
+.section-title {
+    font-size: x-large;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.search-result-container {
+    padding: 8px 8px 16px 8px;
+    margin-top: 64px;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.search-result-header {
+    background-color: #c19d53;
+    height: 96px;
+    /*max-width: 60%;*/
+    position: relative;
+    margin-top: 32px;
+    margin-right: 16px;
+    margin-left: 32px;
+    
+}
+
+.search-result-icon-container {
+    display: inline-block;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    width: 96px;
+    height: 96px;
+    border: solid 4px #c19d53;
+    background-color: black;
+    box-shadow: 4px 4px 8px black;
+}
+
+.search-result-title-banner {
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    left: 116px;
+}
+
+.search-result-title {
+    font-size: x-large;
+}
+
+.search-result-subtitle {
+    font-style: italic;
+    line-height: 1.50em;
+    margin-top: 0.5em;
+}
+
+.search-result-body {
+    margin-top: 16px;
+    margin-left: 32px;
+    font-size: large;
+    position: relative;
+}
+
+@media screen and (max-width: 960px) {
+
+    body {
+        line-height: 1.25em;
+    }
+
+    .search-result-title {
+        font-weight: bold;
+        font-size: medium;
+
+    }
+    
+    .search-result-subtitle {
+        font-size: small;
+        font-style: italic;
+    }
+
+    .search-result-body {
+        font-size: small;
+    }
 }

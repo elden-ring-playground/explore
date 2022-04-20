@@ -1,30 +1,26 @@
-<div style="color:white"> <!--  style="background-color:#f0f0f0" -->
-  <h1 style="background-color:#c19d53; padding:16px; ">Elden Ring Playground: Explore</h1>
-  <div style="margin-left:64px; font-size:x-large">
+<div> <!--  style="background-color:#f0f0f0" -->
+  <div class="site-title">Elden Ring Playground: Explore</div>
+  <div class="search-bar">
     <span>SEARCH</span>
-    <input style="margin-left: 16px; font-size:x-large" type="text" [(ngModel)]="searchText" (change)="onNewSearchText()" />
+    <input class="search-input" type="text" [(ngModel)]="searchText" (change)="onNewSearchText()" />
   </div>
-  <img src="assets/images/elden-ring-border-leaf.png" style="display:block; margin-top: 16px; margin-bottom: 16px; margin-left: auto; margin-right: auto; width:90%; max-width: 640px">
+  <img class="decorative-break" src="assets/images/elden-ring-border-leaf.png">
   <div *ngIf="!isInitialized">
   </div>
   <div *ngIf="isInitialized">
-    <div style="color: white; font-size:x-large; font-weight:bold; display:block; margin-left: auto; margin-right: auto; width:640px; text-align:center;">"{{searchTextLowerCase}}"</div>
-    <div *ngFor="let r of searchResults" style="padding: 8px 8px 16px 8px; margin-top:64px; background-color:rgba(0,0,0,0.75);">
-      <div style="background-color:#c19d53; height: 96px; max-width:60%; position: relative; background-color: #c19d53; margin-left: 32px; margin-top: 32px;">
-        <div style="display:inline-block; width: 96px; height: 96px; border: solid 4px #c19d53; box-shadow: 4px 4px 8px black; position: absolute; top: -16px; left: -16px; background-color: black">
+    <div class="section-title">"{{searchTextLowerCase}}"</div>
+    <div *ngFor="let r of searchResults" class="search-result-container">
+      <div class="search-result-header">
+        <div class="search-result-icon-container">
           <span class="navsprite" [class]="r.type" [title]="r.type"></span>
         </div>
-        <div style="display:inline-block; position: absolute; top: 16px; left: 116px;">
-          <span style="font-size:x-large" [innerHTML]="r.name | boldSpan:searchTextLowerCase"></span><br/>
-          <span *ngIf="r.info">
-            <i><span [innerHTML]="r.info | boldSpan:searchTextLowerCase"></span></i><br/>
-          </span>
+        <div class="search-result-title-banner">
+          <div class="search-result-title" [innerHTML]="r.name | boldSpan:searchTextLowerCase"></div>
+          <div class="search-result-subtitle" [innerHTML]="r.info | boldSpan:searchTextLowerCase" *ngIf="r.info"></div>
         </div>
       </div>
-      <div style="margin-top:16px; margin-left:32px; font-size:large; position: relative">
-        <span *ngIf="r.caption">
-          <span [innerHTML]="r.caption | boldSpan:searchTextLowerCase"></span><br/>
-        </span>
+      <div class="search-result-body">
+        <div [innerHTML]="r.caption | boldSpan:searchTextLowerCase" *ngIf="r.caption"></div>
       </div>
     </div>
   </div>
