@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { ERMessageDataset } from './model/message-dataset';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +13,14 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  public getItemMessages() {
-    return this.http.get(this.DATA_BASE_URL + "combined/msg-item.json");
+  public getItemMessages(): Observable<ERMessageDataset> {
+    //return this.http.get(this.DATA_BASE_URL + "combined/msg-item.json");
+    return this.http.get<ERMessageDataset>(this.DATA_BASE_URL + "msg/engus/item.msgbnd.dcx.json");
   }
 
-  public getMenuMessages() {
-    return this.http.get(this.DATA_BASE_URL + "combined/msg-menu.json");
+  public getMenuMessages(): Observable<ERMessageDataset> {
+    //return this.http.get(this.DATA_BASE_URL + "combined/msg-menu.json");
+    return this.http.get<ERMessageDataset>(this.DATA_BASE_URL + "msg/engus/menu.msgbnd.dcx.json");
   }
 
 }

@@ -2,7 +2,7 @@ body {
     font-family: Raleway;
     color: white;
     line-height: 1.75em;
-    background: url('assets/images/elden-ring-background-page.webp') no-repeat;
+    background: url('https://raw.githubusercontent.com/elden-ring-playground/elden-ring-media/main/menu/low/00_solo/MENU_Load_00012.png') no-repeat;
     background-attachment:fixed;
     margin: 0;
     padding: 0;
@@ -13,10 +13,10 @@ body {
 }
 
 .navsprite {
-    background-image: url('assets/images/navsprite-large.png');
+    background-image: url('assets/images/SB_In_GameTop_HalfScale.png'); /* url('assets/images/navsprite-large.png');*/
     background-repeat: no-repeat;
-    width: 96px;
-    height: 96px;
+    width: 70px;
+    height: 70px;
     display: inline-block;
     vertical-align: middle;
     margin-right: 5px;
@@ -27,49 +27,49 @@ body {
 }
 
 .navsprite.Talisman {
-    background-position:-110px 0; /* bag icon for Talisman ("Accessory") */
+    background-position:-392px -602px; /* bag icon for Talisman ("Accessory") */
 }
 
 .navsprite.Item {
-    background-position:-110px 0; /* bag icon for Item ("Goods") */
+    background-position:-392px -602px; /* bag icon for Item ("Goods") */
 }
 
 .navsprite.Character {
-    background-position:-221px 0; /* character icon for Characters ("Npc") */
+    background-position:-319px -907px; /* character icon for Characters ("Npc") */
 }
 
 .navsprite.Weapon {
-    background-position:-332px 0; /* weapon+armor icon for "Weapon" */
+    background-position:-391px -675px; /* weapon+armor icon for "Weapon" */
 }
 
 .navsprite.Armor {
-    background-position:-332px 0; /* weapon+armor icon for Armor ("Protector") */
-}
-
-.navsprite.d {
-    background-position:-443px 0
+    background-position:-391px -675px; /* weapon+armor icon for Armor ("Protector") */
 }
 
 .navsprite.Place {
-    background-position:-554px 0; /* world icon for Place */
+    background-position:-373px -451px; /* world icon for Place */
 }
 
 .navsprite.Quote {
-    background-position:-665px 0 /* head+scrolls icon for Quotes */
+    background-position:-319px -907px; /* character icon for Quotes */
 }
 
-.navsprite.g {
-    background-position:-776px 0
+.navsprite.Online {
+    background-position:-319px -683px; /* finger icon for online play */
 }
 
-.navsprite.h {
-    background-position:-887px 0
+.navsprite.Grace {
+    background-position:-373px -227px; /* grace icon for tips */
+}
+
+.navsprite.MessageOnGround {
+    background-position:-319px -757px; /* message on ground icon for messages on ground */
 }
 
 .navsprite.miniring {
     width: 48px;
     height: 48px;
-    background-position: -887px 0
+    background-position: -887px 0;
 }
 
 .site-title {
@@ -129,8 +129,8 @@ body {
     position: absolute;
     top: -16px;
     left: -16px;
-    width: 96px;
-    height: 96px;
+    width: 70px;
+    height: 70px;
     border: solid 4px #c19d53;
     background-color: black;
     box-shadow: 4px 4px 8px black;
@@ -140,7 +140,7 @@ body {
     display: inline-block;
     position: absolute;
     top: 16px;
-    left: 116px;
+    left: 80px;
 }
 
 .search-result-title {
