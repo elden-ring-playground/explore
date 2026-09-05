@@ -1,0 +1,28 @@
+<div> <!--  style="background-color:#f0f0f0" -->
+    <h1>Conversations</h1>
+    <div *ngIf="!isInitialized">
+        <div>Loading...</div>
+    </div>
+    <div *ngIf="isInitialized">
+      <div *ngFor="let superId of ObjectKeys(npcTalkMessages)" style="margin-bottom:2.0em;">
+        <img class="decorative-break" src="assets/images/elden-ring-border-leaf.png">
+        <div>
+            <!--<span>Speaker #{{superId}}: </span>-->
+            <span *ngFor="let npcNameId of ObjectKeys(npcTalkMessages[superId].npcNames); index as i">
+                <span *ngIf="i != 0"> &middot; </span>
+                <b>{{npcTalkMessages[superId].npcNames[npcNameId]}}</b><!-- (#{{npcNameId}})-->
+            </span>
+          </div>
+                <ng-container>
+                    <div *ngFor="let conversationId of ObjectKeys(npcTalkMessages[superId].conversations)"  style="margin-bottom:1.5em; margin-left:1.0em;">
+                        <div><i>Converation #{{conversationId}}</i></div>
+                        <div *ngFor="let lineId of ObjectKeys(npcTalkMessages[superId].conversations[conversationId])" style="margin-bottom:0em; margin-left:1.0em;">
+                            <span><i><!--{{superId}}.{{conversationId}}.--><!--{{lineId}} --></i></span>
+                            <span>{{npcTalkMessages[superId].conversations[conversationId][lineId]}}</span>
+                            <br/>
+                        </div>
+                    </div>
+              </ng-container>
+      </div>
+    </div>
+  </div>
